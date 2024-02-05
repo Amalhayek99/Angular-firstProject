@@ -1,0 +1,22 @@
+.main-nav ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 10px;
+    display: flex;
+}
+
+.main-nav li {
+    margin-right: 320px; /* Spacing between list items */
+}
+.nav-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #333;
+    font-weight: bold;
+    font-size: large;
+}
+
+.nav-link:hover {
+    color: #007bff; }
+.active{
+    background-color: rgb(226, 224, 224);
+
+}

@@ -1,0 +1,13 @@
+<div id="d1">
+<div id="d2" *ngFor="let item of topsMen; let i = index ">
+<div>
+<h3>Price : {{item.price}} </h3>
+<h3>Size : {{item.size}} </h3>
+<button *ngIf="item.inStock == true; else solidOut" (click)="senditem(i) ">Add to Cart</button>
+<ng-template #solidOut>
+<p>Out Of Stock</p>
+</ng-template>
+</div>
+<img [src]="item.imageUrl" alt="image">
+</div>
+</div>

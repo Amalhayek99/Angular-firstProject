@@ -1,0 +1,25 @@
+<div id="d1">
+    <div id="d2" *ngFor="let item of service.Cart; let i = index ">
+        <div>
+            <div>
+                <h4>Price : {{item.price}} </h4>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <small>Size : {{item.size}} </small>
+            </div>
+            <button (click)="removeitem(item)">Reomve Item</button>
+        </div>
+        <div>
+            <div id="a">
+                <img [src]="item.imageUrl" alt="image">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div style="text-align: right;" *ngIf=" service.sum  > 0">
+    <h3 style="margin-right: 10px;">Total Price {{ service.sum }}</h3>
+    <div style="margin-right: 10px;" *ngIf="service.sum>50"><small>You Will Get Free Shipping</small></div>
+    <button style="margin: 10px;">click to continue payment</button>
+</div>
